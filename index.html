@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="template.html" rel="import" >
+    
+    <title>house</title>
+    
+   
+</head>
+<body>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="area" placeholder="area"></input>
+        <label name="bedrooms">Bedrooms</label>
+        <select name="facilites" >
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <label name="bathrooms">Bathrooms</label>
+        <select name="bathrooms" >
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <label name="stories">Stories</label>
+        <select name="stories" >
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <label name="parking">Parking</label>
+        <select name="parking" >
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <h3><br>
+    {{prediction_text}}</h3>
+
+    
+</body>
+
+</html>
